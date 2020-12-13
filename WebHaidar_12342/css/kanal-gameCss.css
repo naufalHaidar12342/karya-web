@@ -1,0 +1,48 @@
+* {
+	margin:0;
+	padding:0;
+}
+
+body {
+	font-size: 16px;
+}
+
+.navbar{
+	display: grid;
+	justify-content: center;
+	align-items: center;
+	background-color: #0066ff;
+	text-align: center;
+	height:40px;
+}
+.navbar li{
+	float: left;
+	padding: 10px 5px;
+	display: block;
+	margin:0 10px; /* Atas-Bawah kanan-kiri*/
+}
+
+li a{
+	text-decoration: none;
+	color:#fff;
+}
+.navbar li:hover{
+	background-color: #444;
+	height: 100%;
+}
+
+.post{
+	padding: 10px;
+	margin: 5px 0;
+	min-height: 250px;
+}
+.post img{
+	width: 400px;
+	float: left;
+	margin:0 20px 0 0;
+}
+
+table, th,td {
+	border: 1px solid black;
+	width: auto;
+}
