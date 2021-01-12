@@ -5,6 +5,22 @@
 	
 }
 
+/* a{
+  color: #0033cc;
+}
+
+@media (prefers-color-scheme: dark){
+  body{
+    color: #eee;
+    background: #121212;
+  }
+
+  body a{
+    color: #809fff;
+  }
+} */
+
+
 body {
 	font-size: 16px;
 }
@@ -34,21 +50,82 @@ li a{
 }
 
 .post{
-	display: table;
-	position: relative;
-	margin-right: 0;
+/* nama parentnya */
+  padding-top: 4rem;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
 	/* padding: 10px; */
 	/* margin: 5px 0; */
 	/* min-height: 250px; */
 }
 
-.post.tes{
+.post .article{
+/* nama child/ anaknya */
+  
+  width: 100%;
+  /* supaya full tampilannya  */
+
+  max-width: 1200px;
+  /* supaya tidak terlalu panjang tampilan teksnya,
+  sekaligus biar lebih responsif */
+
+  margin: auto;
+
+  display: flex;
+
+  margin-bottom: 4rem;
+}
+
+.post .article .detail-article{
+  margin-left: 1rem;
+  display: flex;
+  flex-direction: column;
+
+}
+
+.detail-article .title-Of-article{
+  font-weight: bold;
+}
+
+.detail-article .read-time{
+  color: #bf1313;
+}
+
+.detail-article .read-time,
+.detail-article .title-Of-article,
+.detail-article .description{
+  margin-bottom: .5rem;
+}
+
+.image{
+  min-width: 300px;
+  max-width: 300px;
+  height: 280px;
+  overflow: hidden;
+}
+
+.image img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.detail-article .video{
+  width: 100%;
+}
+
+.detail-article .video .iframe {
+  width: 100%;
+  position: relative;
+}
+/* .post.tes{
 	padding-top: 25px;
 	padding-bottom: 25px;
 	border-bottom: solid 1px rgba(37, 38, 39, 0.15);
-}
+} */
 
-.post img{
+/* .post img{
 	display: block;
 	width: 100%;
 	border-radius: 4px;
@@ -59,12 +136,51 @@ li a{
 	/* width: 400px;
 	float: left;
 	margin:0 20px 0 0; */
+/* } */ 
+
+.opinion{
+  /* nama parentnya */
+  padding-top: 4rem;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+	/* padding: 10px; */
+	/* margin: 5px 0; */
+	/* min-height: 250px; */
+  
 }
 
-table, th,td {
-	border: 1px solid black;
-	width: auto;
+.opinion .opini-saya{
+
+  margin-left: 1rem;
+  display: flex;
+  flex-direction: column;
+  
 }
+
+
+.opinion .title{
+  font-weight: bold;
+  color: cornflowerblue;
+  margin-bottom: .5rem;
+
+}
+
+.opinion .opini-saya .desc{
+  margin-bottom: 2rem;
+}
+
+
+table{
+  border-collapse: collapse;
+} 
+
+th,td {
+  border: 1px solid #999;
+  padding: 0.5rem;
+  text-align: left;
+}
+
 
 input[type=text], select, textarea {
     width: 100%;
@@ -126,17 +242,17 @@ input[type=text], select, textarea {
     }
   }
 
-.bungkus-iframe{
-	position: relative;
-	overflow: hidden;
-	padding-top: 56.26%;
+
+
+.image-gameStory{
+  min-width: 400px;
+  max-width: 400px;
+  height: 300px;
+  overflow: hidden;
 }
 
-.bungkus-video{
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 50%;
-	height: 50%;
-	border: 0;
+.image-gameStory img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
