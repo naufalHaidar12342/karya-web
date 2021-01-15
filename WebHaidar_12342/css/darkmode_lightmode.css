@@ -1,0 +1,150 @@
+/* cuma dipakai untuk naruh css dari tirto.id
+belum ada rencana untuk dipakai */
+
+body.bg-dark, body.bg-dark div, body.bg-dark h1, body.bg-dark h2, body.bg-dark h3, body.bg-dark h4, body.bg-dark h5, body.bg-dark h6, body.bg-dark i, body.bg-dark span {
+    color: #e2e2e2!important;
+  }
+  
+  .switch-box{
+    width: 120px;
+    height: 45px;
+    position: fixed;
+    bottom: 20px;
+    box-shadow: -1px 1px 4px -2px #d6d6d6;
+    background-color: #e8e8e8;
+    border-radius: 20px;
+    z-index: 1;
+  }
+  
+  .switch{
+    width: 45px;
+    height: 22px;
+    margin: 0 auto;
+    position: absolute;
+    left: 53%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  *, :after, :before {
+    /* -webkit-box-sizing: border-box; */
+    box-sizing: border-box;
+  }
+  .switch input{
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    opacity: 0;
+    z-index: 100;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+  }
+  
+  input[type=checkbox], input[type=radio] {
+    /* -webkit-box-sizing: border-box; */
+    box-sizing: border-box;
+    padding: 0;
+  }
+  
+  [role=button], a, area, button, input:not([type=range]), label, select, summary, textarea {
+    /* -ms-touch-action: manipulation; */
+    touch-action: manipulation;
+  }
+  
+  button, input {
+    overflow: visible;
+  }
+  
+  button, input, optgroup, select, textarea {
+    margin: 0;
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+  }
+  .switch label {
+    display: block;
+    width: 75%;
+    height: 100%;
+    position: relative;
+    /* background: #1f2736; */
+    /* background: -webkit-gradient(linear,left top,left bottom,from(#121823),to(#161d2b)); */
+    background: linear-gradient(#121823,#161d2b);
+    border-radius: 30px 30px 30px 30px;
+    /* -webkit-box-shadow: inset 0 3px 8px 1px rgba(0,0,0,.5), inset 0 1px 0 rgba(0,0,0,.5), 0 1px 0 hsla(0,0%,100%,.2); */
+    box-shadow: inset 0 3px 8px 1px rgba(0,0,0,.5), inset 0 1px 0 rgba(0,0,0,.5), 0 1px 0 hsla(0,0%,100%,.2);
+    /* -webkit-transition: all .5s ease; */
+    transition: all .5s ease;
+  }
+  
+  label {
+    /* display: inline-block; */
+    /* margin-bottom: 8px; */
+    margin-bottom: .5rem;
+  }
+  
+  [role=button], a, area, button, input:not([type=range]), label, select, summary, textarea {
+    /* -ms-touch-action: manipulation; */
+    touch-action: manipulation;
+  }
+  
+  
+  /* bagian dark mode */
+  .switch input:checked~label+span.dark {
+    border-radius: 10px;
+    color: #039ad9!important;
+    /* background: gradient-gradient(#fff,#77a1b9); */
+    text-shadow: 0 2px 4px rgba(3,154,217,.5);
+  }
+  
+  .switch input:checked~label+span.dark, .switch span.light {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    /* -webkit-transition: all .5s ease; */
+    transition: all .5s ease;
+    z-index: 2;
+  }
+  
+  .switch label+span.dark {
+    /* content: ""; */
+    /* display: inline-block; */
+    right: -28px;
+    /* background: gradient-gradient(#36455b,#283446); */
+    font-size: 14px;
+  }
+  
+  .switch input~label i, .switch label+span.dark {
+    /* position: absolute; */
+    top: 50%;
+    /* -webkit-transform: translateY(-50%); */
+    /* transform: translateY(-50%); */
+    /* z-index: 2; */
+    /* -webkit-transition: all .5s ease; */
+    /* transition: all .5s ease; */
+  }
+  
+  
+  
+  /* bagian light mode */
+  .switch input:checked~label+span.dark, .switch span.light {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    /* -webkit-transition: all .5s ease; */
+    transition: all .5s ease;
+    z-index: 2;
+  }
+  
+  .switch span.light {
+    left: -35px;
+    top: 50%;
+    /* -webkit-transform: translateY(-50%); */
+    transform: translateY(-50%);
+    /* background: gradient-gradient(#36455b,#283446); */
+    color: rgba(0,0,0,.4)!important;
+    font-size: 14px;
+  }
+  
