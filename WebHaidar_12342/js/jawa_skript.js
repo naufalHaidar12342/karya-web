@@ -2,13 +2,18 @@
 if (localStorage.getItem('theme')== 'dark')
     setDarkMode(true)
 
-    
-function setDarkMode(isDark){
+//👓🕶️
+
+function setDarkMode(){
+    let emoticon=''
+    let isDark= document.body.classList.toggle('darkmode')    
+
     if (isDark) {
-        document.body.setAttribute('id', 'darkmode')
+        emoticon='👓'
         localStorage.setItem('theme', 'dark')
     } else{
-        document.body.setAttribute('id', '')
+        emoticon='🕶️'
         localStorage.removeItem('theme')
     }
+    document.getElementById('darkButton').innerHTML= emoticon
 }
