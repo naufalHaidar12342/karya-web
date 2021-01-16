@@ -184,6 +184,58 @@ li a{
   margin-bottom: 2rem;
 }
 
+.about-me{
+  /* nama parentnya */
+  padding-top: 4rem;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.about-me h1{
+  font-size: 2.5rem;
+  font-family:"neosans regular", "Helvetica Neue", Helvetica, Arial, Sans-serif ;
+  letter-spacing: -0.07em;
+  margin-bottom: 0.1em;
+  line-height: 1.2em;
+}
+
+p .intro{
+  font-size: 2.5rem;
+  line-height: 1.3em;
+  margin-bottom: 0.7em;
+  clear: both;
+}
+
+.about-me p{
+  font-family: "proxima nova light", "Helvetica Neue", Helvetica, Arial, Sans-serif;
+  margin-bottom: 1.4em;
+  line-height: 1.4em;
+  -webkit-font-smoothing: antialiased;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 table{
   border-collapse: collapse;
