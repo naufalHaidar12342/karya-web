@@ -24,12 +24,18 @@
 
 /* dark mode dengan javascript/js  */
 .darkmode{
-  background: rgba(0, 0, 0, 0.897);
+  background: #292c35;
   color: whitesmoke;
 }
 
+h1,h3{
+  font-family: 'Roboto Mono', monospace;
+}
+
+
 body {
-	font-size: 16px;
+  font-size: 16px;
+  background-color: #fafafa;
 }
 
 .navbar{
@@ -48,6 +54,7 @@ body {
 }
 
 li a{
+  font-family: 'Roboto Mono', monospace;
 	text-decoration: none;
 	color:#fff;
 }
@@ -328,4 +335,8 @@ footer{
   text-align: center;
   margin-top: 4rem;
   margin-bottom: 1rem;
+}
+
+footer .icon{
+  cursor: pointer;
 }
