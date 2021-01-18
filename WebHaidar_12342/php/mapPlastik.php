@@ -4,7 +4,7 @@
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>submit your favourit game</title>
-    <link rel='stylesheet' href='css/styleForm.css'>
+    <link rel='stylesheet' href='css/kanal-gameCss.css'>
 </head>
 <body>
     <h2 style="text-align: center;">Thanks for the suggestion!</h2>

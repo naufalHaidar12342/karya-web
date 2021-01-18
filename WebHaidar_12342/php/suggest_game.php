@@ -15,10 +15,10 @@
 	</header>
 	<div class="navbar">
         <ul>
-            <li><a href="news.html">News/новость</a></li>
-            <li><a href="game-story.html">Game Story/История Игры</a></li>
-            <li><a href="opinion.html">Opinion/мой взгляд</a></li>
-            <li><a href="about-me.html">About me/обо мне</a></li>
+            <li><a href="WebHaidar_12342/news.html">News/новость</a></li>
+            <li><a href="WebHaidar_12342/game-story.html">Game Story/История Игры</a></li>
+            <li><a href="WebHaidar_12342/opinion.html">Opinion/мой взгляд</a></li>
+            <li><a href="WebHaidar_12342/about-me.html">About me/обо мне</a></li>
 			<li><a href="php/suggest_game.php">Suggest a game!</a></li>
 		</ul>
     </div>
