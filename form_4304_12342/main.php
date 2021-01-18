@@ -12,7 +12,7 @@
         I'm aware that not all games being reviewed yet, so I need your help! By submitting your suggestion, you are enliven my blog and indirectly helps my blog to grow. Thanks!
     </p>
     
-    <div class="container">
+    <div class="container-form">
         <form method="POST" action="mapPlastik.php">
             <div class="row">
                 <div class="col-25">

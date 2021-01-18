@@ -35,6 +35,7 @@ h1,h3{
 
 body {
   font-size: 16px;
+  font-family: 'Source Sans Pro', sans-serif;
   background-color: #fafafa;
 }
 
@@ -87,6 +88,8 @@ li a{
   display: flex;
 
   margin-bottom: 4rem;
+
+  line-height: 1.75em;
 }
 
 .post .article .detail-article{
@@ -255,6 +258,14 @@ th,td {
 }
 
 
+
+
+
+
+
+
+
+
 input[type=text], select, textarea {
     width: 100%;
     padding: 12px;
@@ -329,6 +340,19 @@ input[type=text], select, textarea {
   height: 100%;
   object-fit: cover;
 }
+
+.suggestion .pengantar-form{
+  padding-top: 4rem;
+}
+
+
+
+.suggestion .container-form{
+  padding-top: 4rem;
+  padding-bottom: 4px;
+}
+
+
 
 footer{
   font-size: 2rem;
