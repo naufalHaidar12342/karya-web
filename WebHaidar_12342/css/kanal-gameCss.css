@@ -39,6 +39,13 @@ body {
   background-color: #fafafa;
 }
 
+.header{
+  font-size: 1rem;
+  margin: auto;
+  padding: 0px;
+}
+
+
 .navbar{
 	display: grid;
 	justify-content: center;
