@@ -1,10 +1,12 @@
 
 <html lang='en'>
 <head>
+    <? require_once "settingnya.php";?>
 	<meta charset="UTF-8"> 
     <meta name="viemport" content="width=device-width,intial-scale=1.0">
 	<title>Kanal Game</title>
-	<link rel='stylesheet' href='css/kanal-gameCss.css'>
+    <link rel='stylesheet' href='css/kanal-gameCss.css'>
+    
 </head>
 <body>
 	<header>
@@ -15,11 +17,11 @@
 	</header>
 	<div class="navbar">
         <ul>
-            <li><a href="WebHaidar_12342/news.html">News/новость</a></li>
-            <li><a href="WebHaidar_12342/game-story.html">Game Story/История Игры</a></li>
-            <li><a href="WebHaidar_12342/opinion.html">Opinion/мой взгляд</a></li>
-            <li><a href="WebHaidar_12342/about-me.html">About me/обо мне</a></li>
-			<li><a href="php/suggest_game.php">Suggest a game!</a></li>
+            <li><a href="<?= base_url ?>/news.html">News/новость</a></li>
+            <li><a href="<?= base_url ?>/game-story.html">Game Story/История Игры</a></li>
+            <li><a href="<?= base_url ?>/opinion.html">Opinion/мой взгляд</a></li>
+            <li><a href="<?= base_url ?>/about-me.html">About me/обо мне</a></li>
+			<li><a href="<?= base_url ?>php/suggest_game.php">Suggest a game!</a></li>
 		</ul>
     </div>
     
