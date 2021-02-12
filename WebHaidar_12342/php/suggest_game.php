@@ -1,11 +1,12 @@
 
 <html lang='en'>
 <head>
-    <? require_once "settingnya.php";?>
+    
+    <? require "settingnya.php";?>
 	<meta charset="UTF-8"> 
     <meta name="viemport" content="width=device-width,intial-scale=1.0">
 	<title>Kanal Game</title>
-    <link rel='stylesheet' href='css/kanal-gameCss.css'>
+    <link rel="stylesheet" href="kanal-gameCss.css">
     
 </head>
 <body>

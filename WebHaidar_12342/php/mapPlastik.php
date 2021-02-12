@@ -2,11 +2,27 @@
 <!-- haidar-12342 -->
 <html>
 <head>
+    <? require "settingnya.php";?>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>submit your favourit game</title>
-    <link rel='stylesheet' href='css/kanal-gameCss.css'>
+    <title>Kanal Game</title>
+    <link rel="stylesheet" href="kanal-gameCss.css">
 </head>
 <body>
+    <header>
+		<h1 style='text-align:center'> Kanal Game</h1>
+		<h3 style='text-align:center'>kanal game (игровой канал)</h3>
+		<h3 style='text-align:center'>hope you get something useful~</h3>
+		<hr>
+	</header>
+	<div class="navbar">
+        <ul>
+            <li><a href="<?= base_url ?>/news.html">News/новость</a></li>
+            <li><a href="<?= base_url ?>/game-story.html">Game Story/История Игры</a></li>
+            <li><a href="<?= base_url ?>/opinion.html">Opinion/мой взгляд</a></li>
+            <li><a href="<?= base_url ?>/about-me.html">About me/обо мне</a></li>
+			<li><a href="<?= base_url ?>php/suggest_game.php">Suggest a game!</a></li>
+		</ul>
+    </div>
     <h2 style="text-align: center;">Thanks for the suggestion!</h2>
     <p>
         I might not able to instantly reply to your suggestion, but i definitely gonna reply it~
