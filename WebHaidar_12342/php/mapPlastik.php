@@ -3,9 +3,10 @@
 <html>
 <head>
     <? require "settingnya.php";?>
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kanal Game</title>
-    <link rel="stylesheet" href="kanal-gameCss.css">
+    <link rel="stylesheet" href="special4php.css">
 </head>
 <body>
     <header>
@@ -23,12 +24,18 @@
 			<li><a href="<?= base_url ?>php/suggest_game.php">Suggest a game!</a></li>
 		</ul>
     </div>
-    <h2 style="text-align: center;">Thanks for the suggestion!</h2>
-    <p>
-        I might not able to instantly reply to your suggestion, but i definitely gonna reply it~
-    </p>
+
+
+    <div class="confirmation">
+        <div class="thanks">
+            Thanks for the suggestion!
+            I might not able to instantly reply to your suggestion, but i definitely gonna reply it~
+        </div>
+    </div>
+        
     
-    <div class="container">
+    
+    <div class="show-data">
             <?php
 			    if (isset($_POST['your-name'])){
 			    $yourname=$_POST['your-name'];
@@ -47,5 +54,13 @@
             </div>
         
     </div>
+
+    <footer>
+            <p> Click the glasses!</p>
+            <script type="text/javascript"src="jawa_skript.js"></script>
+            <span class="icon" onclick="setDarkMode()" id="darkButton">👓</span>
+            
+        </footer>
+
 </body>
 </html>

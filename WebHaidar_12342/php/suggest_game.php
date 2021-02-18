@@ -6,7 +6,8 @@
 	<meta charset="UTF-8"> 
     <meta name="viemport" content="width=device-width,intial-scale=1.0">
 	<title>Kanal Game</title>
-    <link rel="stylesheet" href="kanal-gameCss.css">
+    <link rel="stylesheet" href="special4php.css">
+    <!-- <link rel="stylesheet" href="<? base_url?>/css/kanal-gameCss.css"> -->
     
 </head>
 <body>
@@ -34,7 +35,7 @@
         </p>
         </div>
 
-        <div class="container">
+        <div class="form-container">
             <form method="POST" action="mapPlastik.php">
                 <div class="row">
                     <div class="col-25">
@@ -87,7 +88,14 @@
                 <div class="row">
                     <input type="submit" value="Submit!">
                 </div>
-            </form>
+            </form>        
         </div>
+
+        <footer>
+            <p> Click the glasses!</p>
+            <script type="text/javascript" src="jawa_skript.js"></script>
+            <span class="icon" onclick="setDarkMode()" id="darkButton">👓</span>
+            
+        </footer>
     </div>
     
