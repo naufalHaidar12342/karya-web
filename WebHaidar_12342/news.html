@@ -3,6 +3,8 @@
 <head>
 	<meta charset="UTF-8"> 
     <meta name="viemport" content="width=device-width,intial-scale=1.0">
+    <!-- <meta http-equiv="X-UA-Compatible" content="ie-edge,chrome=1"> -->
+    <!-- <meta name="HandHeldFriendly" content="True"> -->
     <title>Kanal Game</title>
 
     <!-- menggunakan font yang disediakan oleh Google Font (font.google.com) -->
@@ -13,25 +15,60 @@
 
 
     <!-- mengarahkan styling ke external css  -->
-    <link rel='stylesheet' href='css/kanal-gameCss.css'>
+    <!-- <link rel='stylesheet' href='css/kanal-gameCss.css'> -->
+    <link rel="stylesheet" href="css/styleBaru.css">
+    
 </head>
 <body>
+    
 	<header>
-		<h1 style='text-align:center'> Kanal Game</h1>
-		<h3 style='text-align:center'>kanal game (игровой канал)</h3>
-		<h3 style='text-align:center'>hope you get something useful~</h3>
-		<hr>
-	</header>
-	<div class="navbar">
-        <ul>
-            <li><a href="news.html">News/новость</a></li>
-            <li><a href="game-story.html">Game Story/История Игры</a></li>
-            <li><a href="opinion.html">Opinion/мой взгляд</a></li>
-            <li><a href="about-me.html">About me/обо мне</a></li>
-            <li><a href="php/suggest_game.php">Suggest a game!</a></li>
-        </ul>
-    </div>
+		<!-- <h1 style='text-align:center'> Kanal Game</h1> -->
+		<!-- <h3 style='text-align:center'>kanal game (игровой канал)</h3>
+		<h3 style='text-align:center'>hope you get something useful~</h3> -->
 
+	</header>
+	<nav>
+        <div class="nav-name">
+            <h4> Kanal Game</h4>
+        </div>
+
+        <ul class="nav-links">
+            <li>
+                <a href="news.html">News</a>
+            </li>
+            
+            
+            <li>
+                <a href="game-story.html">Story</a>
+            </li>
+            
+
+            <li>
+                <a href="opinion.html">My View</a>
+            </li>
+            
+
+            <li>
+                <a href="about-me.html">About</a>
+            </li>
+            
+            
+            <li>
+                <a href="php/suggest_game.php">Suggest</a>
+            </li>
+            
+        </ul>
+
+        <div class="menuButton" onclick="navSlide()">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+
+        </div>
+    </nav>
+    <script src="js/jawa_skript.js" ></script>
+    
+    
     
 
 	<div class='post'>
@@ -53,14 +90,38 @@
                     Mengambil latar di tahun 1980-an , game ini kembali berfokus pada peristiwa penting dalam linimasa Perang Dingin/Cold War, sesuai namanya. Peluncuran resmi game ini akan dilaksanakan pada 13 November 2020, namun mode multiplayer sudah dapat dinikmati oleh pengguna PS4 sejak 10 September 2020, bertepatan dengan peluncuran video multiplayer reveal di kanal YouTube resmi milik Call of Duty.
 
                 </div>
-                <div class="trailer-video">
+                
+
+            </div>
+        </div>
+    
+        <!-- artikel ke-2 -->
+	<div class='post'>
+        
+        <div class="article">
+            <div class="image">
+                <img src='img/BO-Cold-War-Reveal-Tout-1-1280x720.jpg' alt=''>	
+            </div>
+
+            <div class="detail-article">
+                <div class="read-time"> Waktu baca: &plusmn; 3 menit </div>
+                <div class="title-Of-article"> Multiplayer Reveal untuk Black Ops Cold War</div>
+
+                <div class="description">Kurang lebih beberapa minggu setelah trailer perdana, Call of Duty
+                    meluncurkan multiplayer trailer untuk seri game terbarunya melalui official channel YouTube Call of Duty. Cold War akan menjadi sekuel dari Black Ops, game yang diluncurkan sekitar tahun 2011 lalu. 
+                </div>
+                <div class="description">
+                    Mengambil latar di tahun 1980-an , game ini kembali berfokus pada peristiwa penting dalam linimasa Perang Dingin/Cold War, sesuai namanya. Peluncuran resmi game ini akan dilaksanakan pada 13 November 2020, namun mode multiplayer sudah dapat dinikmati oleh pengguna PS4 sejak 10 September 2020, bertepatan dengan peluncuran video multiplayer reveal di kanal YouTube resmi milik Call of Duty.
+
+                </div>
+                <!-- <div class="trailer-video">
                         <iframe src='video/Call of Duty®_ Black Ops Cold War - Multiplayer Reveal Trailer.mp4 ' allowfullscreen=''>
                             <!-- <video controls>
                                 <source src="video/Call of Duty®_ Black Ops Cold War - Multiplayer Reveal Trailer.mp4" type="video/mp4"> 
                             </video> -->
                         </iframe>
                 
-                </div>
+                </div> 
 
             </div>
         </div>
@@ -117,7 +178,7 @@
         
         <footer>
             <p> Click the glasses!</p>
-            <script src="js/jawa_skript.js"></script>
+            
             <span class="icon" onclick="setDarkMode()" id="darkButton">👓</span>
             
         </footer>

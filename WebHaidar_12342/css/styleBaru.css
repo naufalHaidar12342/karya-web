@@ -1,0 +1,418 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+.darkmode {
+    background: #292c35;
+    color: whitesmoke;
+}
+
+h1, h3 {
+    font-family: 'Roboto Mono', monospace;
+}
+
+body {
+    font-size: 16px;
+    font-family: 'Source Sans Pro', sans-serif;
+    background-color: #fafafa;
+}
+
+header {
+    font-size: 1rem;
+    margin-top: 8px;
+    margin-bottom: auto;
+    padding: 0px;
+    /* line-height: 1.75rem; */
+}
+
+header h3 {
+    margin-top: 1.5rem;
+    /* line-height: 1rem; */
+}
+
+/* #start of navbar styling */
+
+nav {
+    position: absolute;
+    top: auto;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 8vh;
+    background-color: slategray;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+.nav-name {
+    color: rgb(226, 226, 226);
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    font-size: 20px;
+}
+
+.nav-links {
+    display: flex;
+    justify-content: space-around;
+    width: 30%;
+}
+
+.nav-links li {
+    list-style: none;
+}
+
+.nav-links a {
+    color: rgb(226, 226, 226);
+    text-decoration: none;
+    letter-spacing: 3px;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.menuButton {
+    display: none;
+}
+
+.menuButton div {
+    width: 25px;
+    height: 3px;
+    margin: 5px;
+    background-color: rgb(226, 226, 226);
+    transition: all 0.2s ease;
+}
+
+
+
+@media screen and (max-width:1024px) {
+    .nav-links {
+        width: 60%;
+    }
+}
+
+@media screen and (max-width:768px) {
+    body {
+        overflow-x: hidden;
+    }
+    .nav-links {
+        position: absolute;
+        right: 0px;
+        height: 92vh;
+        top: 8vh;
+        background-color: slategray;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 50%;
+        transform: translateX(100%);
+        transition: transform 0.5s ease-in;
+    }
+    .nav-links li {
+        opacity: 0;
+    }
+    .menuButton {
+        display: block;
+        cursor: pointer;
+    }
+}
+
+.nav-active {
+    transform: translateX(0%);
+}
+
+@keyframes navLinkFade {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
+.toggle .line1 {
+    transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.toggle .line2 {
+    opacity: 0;
+}
+
+.toggle .line3 {
+    transform: rotate(45deg) translate(-5px, -6px);
+}
+
+/* ---end of navbar styling--- */
+
+.post {
+    /* nama parentnya */
+    padding-top: 8rem;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.post .article {
+    /* nama child/ anaknya */
+    width: 100%;
+    /* supaya full tampilannya  */
+    max-width: 1200px;
+    /* supaya tidak terlalu panjang tampilan teksnya,
+      sekaligus biar lebih responsif */
+    margin: auto;
+    display: flex;
+    margin-bottom: 4rem;
+    line-height: 1.75em;
+}
+
+.post .article .detail-article {
+    margin-left: 1rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.detail-article .title-Of-article {
+    font-weight: bold;
+}
+
+.detail-article .read-time {
+    color: #bf1313;
+}
+
+.detail-article .read-time, .detail-article .title-Of-article, .detail-article .description {
+    margin-bottom: .5rem;
+}
+
+.image {
+    min-width: 300px;
+    max-width: 300px;
+    height: 280px;
+    overflow: hidden;
+}
+
+.image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* .detail-article .trailer-video {
+    width: 100%;
+}
+
+.detail-article .trailer-video .iframe {
+    width: 100%;
+    position: relative;
+} */
+
+/* .trailer-video .iframe .video{
+      width: 100%;
+      position: relative;
+    }  */
+
+/* .post.tes{
+        padding-top: 25px;
+        padding-bottom: 25px;
+        border-bottom: solid 1px rgba(37, 38, 39, 0.15);
+    } */
+
+/* .post img{
+        display: block;
+        width: 100%;
+        border-radius: 4px;
+        max-height: 160px;
+        max-width: 280px;
+        object-fit: cover;
+    
+        /* width: 400px;
+        float: left;
+        margin:0 20px 0 0; */
+
+/* } */
+
+.opinion {
+    /* nama parentnya */
+    padding-top: 4rem;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    /* padding: 10px; */
+    /* margin: 5px 0; */
+    /* min-height: 250px; */
+}
+
+.opinion .opini-saya {
+    margin-left: 1rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.opinion .title {
+    font-weight: bold;
+    color: cornflowerblue;
+    margin-bottom: .5rem;
+}
+
+.opinion .opini-saya .desc {
+    margin-bottom: 2rem;
+}
+
+.about-me {
+    /* nama parentnya */
+    padding-top: 4rem;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.about-me h1 {
+    font-size: 2.5rem;
+    font-family: "neosans regular", "Helvetica Neue", Helvetica, Arial, Sans-serif;
+    letter-spacing: -0.07em;
+    margin-bottom: 0.1em;
+    line-height: 1.2em;
+}
+
+p .intro {
+    font-size: 2.5rem;
+    line-height: 1.3em;
+    margin-bottom: 0.7em;
+    clear: both;
+}
+
+.about-me p {
+    font-family: "proxima nova light", "Helvetica Neue", Helvetica, Arial, Sans-serif;
+    margin-bottom: 1.4em;
+    line-height: 1.4em;
+    -webkit-font-smoothing: antialiased;
+}
+
+.suggestion {
+    padding-top: 4rem;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.image-gameStory {
+    min-width: 400px;
+    max-width: 400px;
+    height: 300px;
+    overflow: hidden;
+}
+
+.image-gameStory img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.suggestion .pengantar-form {
+    padding-top: 4rem;
+    padding-left: 1rem;
+}
+
+.suggestion .container-form {
+    padding-top: 4rem;
+    padding-bottom: 4px;
+}
+
+.show-data {
+    margin-left: 1rem;
+    display: flex;
+    flex-direction: column;
+}
+
+footer {
+    font-size: 2rem;
+    text-align: center;
+    margin-top: 4rem;
+    margin-bottom: 1rem;
+}
+
+footer .icon {
+    cursor: pointer;
+}
+
+/* bagian ini untuk table
+    berisi game kesukaan */
+
+table {
+    border-collapse: collapse;
+}
+
+th, td {
+    border: 1px solid #999;
+    padding: 0.5rem;
+    text-align: left;
+}
+
+/* ----------------------------- */
+
+/* bagian untuk form */
+
+input[type=text], select, textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: vertical;
+}
+
+label {
+    padding: 12px 12px 12px 0;
+    display: inline-block;
+}
+
+input[type=submit] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    float: right;
+}
+
+input[type=submit]:hover {
+    background-color: #45a049;
+}
+
+.wadah-form {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+}
+
+.col-25 {
+    float: left;
+    width: 25%;
+    margin-top: 6px;
+}
+
+.col-75 {
+    float: left;
+    width: 75%;
+    margin-top: 6px;
+}
+
+/* Clear floats after the columns */
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+
+@media screen and (max-width: 600px) {
+    .col-25, .col-75, input[type=submit] {
+        width: 100%;
+        margin-top: 0;
+    }
+}
+
+/* ------------------------------------------------- */
