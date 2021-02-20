@@ -53,4 +53,4 @@ function navSlide(){
     });   
 }
 
-navSlide();
+/* navSlide(); */
