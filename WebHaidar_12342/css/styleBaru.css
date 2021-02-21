@@ -49,6 +49,7 @@ nav {
 .nav-name {
     color: rgb(226, 226, 226);
     text-transform: uppercase;
+    font-family: 'Press Start 2P', cursive;
     letter-spacing: 5px;
     font-size: 20px;
 }
@@ -59,7 +60,42 @@ nav {
     width: 30%;
 }
 
+/* efek ketika kursor
+di atas tombol (belum di klik) */
+
+
+nav .nav-links li a:hover {
+    color: rgba(77, 100, 124, 0.466);
+}
+
+nav .nav-links li a:after {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+    width: 100%;
+    height: 1px;
+    content: '.';
+    color: transparent;
+    background: #F1C40F;
+    visibility: none;
+    opacity: 0;
+    z-index: 1;
+}
+
+nav .nav-links  li a:hover:after {
+    opacity: 1;
+    visibility: visible;
+    height: 100%;
+}
+
 .nav-links li {
+    font-family: 'Barlow Semi Condensed', sans-serif;
+    font-size: 16px;
+    letter-spacing: 3px;
     list-style: none;
 }
 
@@ -82,8 +118,6 @@ nav {
     background-color: rgb(226, 226, 226);
     transition: all 0.2s ease;
 }
-
-
 
 @media screen and (max-width:1024px) {
     .nav-links {

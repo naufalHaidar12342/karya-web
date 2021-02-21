@@ -28,6 +28,9 @@ function setDarkMode(){
 
 
 
+
+
+
 function navSlide(){
     const menuButton= document.querySelector('.menuButton');
     const nav= document.querySelector('.nav-links');
