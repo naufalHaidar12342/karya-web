@@ -125,12 +125,10 @@ nav .navdesktop  li a:hover:after {
 }
 
 /* untuk navbar mobile */
-header .wrapmobile{
-    display: flex;
-}
+
 
 .navmobile{
-    display: none;
+    display: flex;
     flex-direction: column;
 }
 
@@ -151,13 +149,6 @@ header .wrapmobile{
 /* menyembunyikan navbar mobile
 di tampilan desktop */
 
-@media screen and (min-width:769px){
-    header .wrapmobile{
-        display: none;
-    }
-
-}
-    
 
 @media screen and (max-width:1024px) {
     .navdesktop {
@@ -188,6 +179,24 @@ di tampilan desktop */
     .menuButton {
         display: block;
         cursor: pointer;
+    }
+}
+
+.wrapmobile{
+    display: none;
+}
+
+@media screen and (max-width:1000px) {
+    .wrapmobile{
+        display: flex;
+    }
+
+    .wrapdesktop{
+        display:none;
+    }
+
+    header nav{
+        max-width:100%;
     }
 }
 
