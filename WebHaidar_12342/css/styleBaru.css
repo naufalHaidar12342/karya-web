@@ -26,9 +26,10 @@ ul{
 }
 
 header {
+    position: absolute;
     width: 100%;
     font-size: 1rem;
-    margin-top: 8px;
+    /* margin-top: 8px; */
     margin-bottom: auto;
     padding: 0px;
     background-color: slategray;
@@ -37,10 +38,10 @@ header {
 
 header nav {
     position: relative;
-    height: 10vh;
-    max-width: 75%;
+    height: 9vh;
+    max-width: 90%;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
     /* min-height: 8vh; */
     margin: 0 auto;
@@ -54,11 +55,64 @@ nav ul li a:after,
 nav ul li a:before {
   transition: all .5s;
 }
+nav .navdesktop li a {
+    position: relative;
+    z-index: 1;
+    padding:8px;
+}
+
+nav .navdesktop li a:hover {
+    color: rgba(149, 193, 240, 0.39);
+}
+
+nav .navdesktop li a:after {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+    width: 100%;
+    height: 5px;
+    content: '.';
+    color: transparent;
+    background: rgba(37, 56, 78, 0.466);
+    visibility: none;
+    opacity: 0;
+    z-index: -1;
+}
+
+nav .navdesktop  li a:hover:after {
+    opacity: 1;
+    visibility: visible;
+    height: 100%;
+}
+@-webkit-keyframes fill {
+    0% {
+      width: 0%;
+      height: 5px;
+    }
+    50% {
+      width: 100%;
+      height: 5px;
+    }
+    100% {
+      width: 100%;
+      height: 100%;
+      background: rgb(129, 126, 126);
+    }
+}
+/* ---end of selectors for hover animation--- */
 
 
+/* menu button */
+
+/* ---end of menu button styling--- */
 nav .nav-name{
     color: rgb(226, 226, 226);
     text-transform: uppercase;
+    justify-content: space-evenly;
     font-family: 'Press Start 2P', cursive;
     letter-spacing: 5px;
     font-size: 20px;
@@ -73,7 +127,9 @@ nav ul.navdesktop{
     font-family: 'Barlow Semi Condensed', sans-serif;
     font-size: 16px;
     letter-spacing: 3px;
-    padding: 3rem;
+    padding: 2rem;
+    align-items: center;
+    justify-content: center;
 }
 
 .navdesktop a {
@@ -81,12 +137,37 @@ nav ul.navdesktop{
     text-decoration: none;
     letter-spacing: 3px;
     font-weight: bold;
-    font-size: 14px;
+    font-size: 16px;
+    padding: 0 2rem;
     
 }
 /* ketika screen size di bawah 768px,
 navdesktop dihilangkan */
 @media(max-width:767px){
+    nav ul.navmobile{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        /* transform: translateX(100%); */
+        width: 100%;
+    }
+    
+    .navmobile li{
+        font-family: 'Barlow Semi Condensed', sans-serif;
+        font-size: 16px;
+        letter-spacing: 3px;
+        padding: 2rem;
+    }
+    
+    
+    .navmobile a{
+        color: rgba(226, 226, 226, 0.541);
+        text-decoration: none;
+        letter-spacing: 3px;
+        font-weight: bold;
+        font-size: 14px;
+    }
+    
     nav ul.navdesktop{
         display: none;
     }
@@ -108,27 +189,11 @@ dihilangkan */
 }
 
 nav ul.navmobile{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    /* transform: translateX(100%); */
-    width: 100%;
+    display: none;
 }
 
 .navmobile li{
-    font-family: 'Barlow Semi Condensed', sans-serif;
-    font-size: 16px;
-    letter-spacing: 3px;
-    padding: 2rem;
-}
-
-
-.navmobile a{
-    color: rgba(226, 226, 226, 0.541);
-    text-decoration: none;
-    letter-spacing: 3px;
-    font-weight: bold;
-    font-size: 14px;
+    display: none;
 }
 
 .post {
