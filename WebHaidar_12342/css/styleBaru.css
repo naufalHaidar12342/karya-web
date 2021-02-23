@@ -40,7 +40,7 @@ header nav {
     height: 10vh;
     max-width: 75%;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
     align-items: center;
     /* min-height: 8vh; */
     margin: 0 auto;
@@ -83,14 +83,13 @@ nav ul.navdesktop{
     font-weight: bold;
     font-size: 14px;
     
-
+}
 /* ketika screen size di bawah 768px,
 navdesktop dihilangkan */
-@media (max-width:767px){
+@media(max-width:767px){
     nav ul.navdesktop{
         display: none;
     }
-    
 }
 
 /* ketika screen size 
