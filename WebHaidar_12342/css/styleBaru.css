@@ -26,14 +26,16 @@ ul{
 }
 
 header {
-    position: absolute;
+    position: fixed;
     width: 100%;
     font-size: 1rem;
     /* margin-top: 8px; */
     margin-bottom: auto;
     padding: 0px;
-    background-color: slategray;
+    background-color: rgb(112, 128, 144, 0.95);
     /* line-height: 1.75rem; */
+    z-index: 100;
+    /* box-shadow:  0 10px 20px rgba(50,50,50,.95); */
 }
 
 header nav {
