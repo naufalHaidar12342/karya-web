@@ -40,13 +40,21 @@ header nav {
     height: 10vh;
     max-width: 75%;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
     align-items: center;
     /* min-height: 8vh; */
     margin: 0 auto;
    
     font-family: 'Source Sans Pro', sans-serif;
 }
+
+/* transisi ketika mouse hover */
+nav ul li a,
+nav ul li a:after,
+nav ul li a:before {
+  transition: all .5s;
+}
+
 
 nav .nav-name{
     color: rgb(226, 226, 226);
@@ -55,7 +63,7 @@ nav .nav-name{
     letter-spacing: 5px;
     font-size: 20px;
 }
-nav ul.navdekstop{
+nav ul.navdesktop{
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
@@ -65,20 +73,63 @@ nav ul.navdekstop{
     font-family: 'Barlow Semi Condensed', sans-serif;
     font-size: 16px;
     letter-spacing: 3px;
-    padding: 2rem;
+    padding: 3rem;
 }
 
 .navdesktop a {
-    color: rgb(211, 99, 99);
+    color: rgba(226, 226, 226, 0.541);
     text-decoration: none;
     letter-spacing: 3px;
     font-weight: bold;
     font-size: 14px;
 }
 
+/* ketika screen size di bawah 768px,
+navdesktop dihilangkan */
+@media (max-width:767px){
+    nav ul.navdesktop{
+        display: none;
+    }
+    
+}
+
+/* ketika screen size 
+lebih dari 768px. navmobile
+dihilangkan */
+@media(min-width:768px){
+    nav ul.navmobile{
+        display: none;
+    }
+    .navmobile li{
+        display: none;
+    }    
+    .navmobile a{
+        display: none;
+    }
+}
+
 nav ul.navmobile{
     display: flex;
     flex-direction: column;
+    justify-content: space-evenly;
+    /* transform: translateX(100%); */
+    width: 100%;
+}
+
+.navmobile li{
+    font-family: 'Barlow Semi Condensed', sans-serif;
+    font-size: 16px;
+    letter-spacing: 3px;
+    padding: 2rem;
+}
+
+
+.navmobile a{
+    color: rgba(226, 226, 226, 0.541);
+    text-decoration: none;
+    letter-spacing: 3px;
+    font-weight: bold;
+    font-size: 14px;
 }
 
 .post {
