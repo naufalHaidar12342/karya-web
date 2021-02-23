@@ -66,7 +66,7 @@ nav .nav-name{
 nav ul.navdesktop{
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
+    justify-content: space-between;
 }
 
 .navdesktop li{
@@ -82,7 +82,7 @@ nav ul.navdesktop{
     letter-spacing: 3px;
     font-weight: bold;
     font-size: 14px;
-}
+    
 
 /* ketika screen size di bawah 768px,
 navdesktop dihilangkan */
@@ -105,7 +105,7 @@ dihilangkan */
     }    
     .navmobile a{
         display: none;
-    }
+    }   
 }
 
 nav ul.navmobile{
