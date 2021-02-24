@@ -110,7 +110,33 @@ nav .navdesktop  li a:hover:after {
     display: flex;
     flex-direction: column;
 }
+nav ul.navmobile{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    /* transform: translateX(100%); */
+    width: 100%;
+}
 
+.navmobile li{
+    font-family: 'Barlow Semi Condensed', sans-serif;
+    font-size: 16px;
+    letter-spacing: 3px;
+    padding: 2rem;
+}
+
+
+.navmobile a{
+    color: rgba(226, 226, 226, 0.541);
+    text-decoration: none;
+    letter-spacing: 3px;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+nav ul.navdesktop{
+    display: none;
+}
 
 
 .menuButton {

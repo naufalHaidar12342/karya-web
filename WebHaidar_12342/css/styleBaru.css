@@ -29,9 +29,10 @@ header {
     position: fixed;
     width: 100%;
     font-size: 1rem;
+    box-shadow: 1px 1px 4px 0 rgba(0,0,0,.1);
     /* margin-top: 8px; */
-    margin-bottom: auto;
-    padding: 0px;
+    /* margin-bottom: auto; */
+    /* padding: 0px; */
     /* alpha value di background-color: ; (angka paling akhir) berfungsi untuk mengatur opacity */
     background-color: rgb(112, 128, 144, 0.95);
     /* line-height: 1.75rem; */
@@ -40,8 +41,9 @@ header {
 }
 
 header nav {
+    
     position: relative;
-    height: 9vh;
+    height: 100 px;
     max-width: 90%;
     display: flex;
     justify-content: space-between;
@@ -109,23 +111,118 @@ nav .navdesktop  li a:hover:after {
 /* ---end of selectors for hover animation--- */
 
 
-/* menu button */
+/* menu button/hamburger menu */
+nav .menuIcon{
+    cursor: pointer;
+    display: inline-block;
+    float: right;
+    padding: 28px 20px;
+    position: relative;
+    user-select: none;
+}
 
+nav .menuIcon .navIcon{
+    background: rgb(226, 226, 226);
+    display: block;
+    height: 2px;
+    position: relative;
+    transition: background .2s ease-out;
+    width: 18px;
+
+}
+
+nav .menuIcon .navIcon::before,
+nav .menuIcon .navIcon::after{
+    background:rgb(226, 226, 226) ;
+    content: '';
+    display: block;
+    height: 100%;
+    position: absolute;
+    transition: all .2s ease-out;
+    width: 100%;
+}
+
+nav .menuIcon .navIcon::before{
+    top: 5px;
+}
+
+nav .menuIcon .navIcon::after{
+    top: -5px;
+}
+
+nav .menuButton{
+    display: none;
+}
+
+nav .menuButton:checked ~ .navdesktop{
+    max-height: 240px;
+}
+
+nav .menuButton:checked ~ .menuIcon .navIcon{
+    background:  rgb(112, 128, 144, 0.95);
+}
+
+nav .menuButton:checked ~ .menuIcon .navIcon::before{
+    transform: rotate(-45deg);
+}
+nav .menuButton:checked ~ .menuIcon .navIcon::after{
+    transform: rotate(45deg);
+}
+
+nav .menuButton:checked ~ .menuIcon:not(.steps) .navIcon::before,
+nav .menuButton:checked ~ .menuIcon:not(.steps) .navIcon::after{
+    top: 0;
+}
+
+@media (min-width:768px){
+    nav li{
+        float: left;
+    }
+    nav li a{
+        padding: 20px 30px;
+    }
+    nav ul.navdesktop{
+        clear: none;
+        float: left;
+        max-height: none;
+    }
+    nav .menuIcon{
+        display: none;
+    }
+}
 /* ---end of menu button styling--- */
 nav .nav-name{
+    display: block;
+    float: left;
     color: rgb(226, 226, 226);
     text-transform: uppercase;
     justify-content: space-evenly;
     font-family: 'Press Start 2P', cursive;
     letter-spacing: 5px;
-    font-size: 20px;
+    font-size: 1.5em;
+    padding: 10px 20px;
 }
-nav ul.navdesktop{
+
+nav ul{
     margin: 0;
     padding: 0;
+    list-style: none;
+    overflow: hidden;
+    
+}
+
+nav li a{
+    display: block;
+    padding: 20px 20px;
+    text-decoration: none;
+}
+nav ul.navdesktop{
+    clear: both;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    max-height: 0;
+    transition: max-height .2s ease-in-out;
 }
 
 .navdesktop li{
@@ -133,10 +230,10 @@ nav ul.navdesktop{
     font-family: 'Barlow Semi Condensed', sans-serif;
     font-size: 16px;
     letter-spacing: 3px;
-    padding: 2rem 2rem;
-    border-left: 1px;
+    padding: 20px 20px;
+    /* border-left: 1px;
     border-top: 1px;
-    margin-top: 3px;
+    margin-top: 3px; */
     align-items: center;
     justify-content: center;
 }
@@ -148,45 +245,19 @@ nav ul.navdesktop{
     font-weight: bold;
     font-size: 16px;
     margin-top: 3px;
-    /* padding: 0 2rem; */
+    padding: 0 2rem;
     
 }
 /* ketika screen size di bawah 768px,
 navdesktop dihilangkan */
-@media(max-width:767px){
-    nav ul.navmobile{
-        display: flex;
-        flex-direction: column;
-        justify-content: space-evenly;
-        /* transform: translateX(100%); */
-        width: 100%;
-    }
+/* @media(max-width:767px){
     
-    .navmobile li{
-        font-family: 'Barlow Semi Condensed', sans-serif;
-        font-size: 16px;
-        letter-spacing: 3px;
-        padding: 2rem;
-    }
-    
-    
-    .navmobile a{
-        color: rgba(226, 226, 226, 0.541);
-        text-decoration: none;
-        letter-spacing: 3px;
-        font-weight: bold;
-        font-size: 14px;
-    }
-    
-    nav ul.navdesktop{
-        display: none;
-    }
-}
+} */
 
 /* ketika screen size 
 lebih dari 768px. navmobile
 dihilangkan */
-@media(min-width:768px){
+/* @media(min-width:768px){
     nav ul.navmobile{
         display: none;
     }
@@ -196,15 +267,15 @@ dihilangkan */
     .navmobile a{
         display: none;
     }   
-}
+} */
 
-nav ul.navmobile{
+/* nav ul.navmobile{
     display: none;
 }
 
 .navmobile li{
     display: none;
-}
+} */
 
 .post {
     /* nama parentnya */
