@@ -221,7 +221,7 @@ nav ul.navdesktop{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    max-height: 0;
+    /* max-height: 0; */
     transition: max-height .2s ease-in-out;
 }
 
