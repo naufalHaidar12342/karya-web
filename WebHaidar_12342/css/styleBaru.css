@@ -1,3 +1,7 @@
+/* credit for navbar design:
+-dev ed ()
+mutedblues (https://codepen.io/mutedblues/pen/MmPNPG?editors=1100) */
+
 * {
     margin: 0px;
     padding: 0px;
@@ -10,22 +14,26 @@
     color: whitesmoke;
 }
 
-h1, h3 {
+/* h1, h3 {
     font-family: 'Roboto Mono', monospace;
-}
+} */
 
 body {
     font-size: 16px;
     font-family: 'Source Sans Pro', sans-serif;
-    background-color: #fafafa;
+    background-color: #fffafa;
     transition: all 0.2s;
 }
 
 ul{
     list-style: none;
 }
+/* bagian header */
 
 header {
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+    /* display: block; */
     position: fixed;
     width: 100%;
     font-size: 1rem;
@@ -36,14 +44,13 @@ header {
     /* alpha value di background-color: ; (angka paling akhir) berfungsi untuk mengatur opacity */
     background-color: rgb(112, 128, 144, 0.95);
     /* line-height: 1.75rem; */
-    z-index: 100;
+    z-index: 3;
     /* box-shadow:  0 10px 20px rgba(50,50,50,.95); */
 }
 
 header nav {
-    
     position: relative;
-    height: 100 px;
+    /* height: 100 px; */
     max-width: 90%;
     display: flex;
     justify-content: space-between;
@@ -54,23 +61,62 @@ header nav {
     font-family: 'Source Sans Pro', sans-serif;
 }
 
-/* transisi ketika mouse hover */
-nav ul li a,
-nav ul li a:after,
-nav ul li a:before {
-  transition: all .5s;
-}
-nav .navdesktop li a {
-    position: relative;
-    z-index: 1;
-    padding:8px;
+header ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    overflow: hidden;
 }
 
-nav .navdesktop li a:hover {
+header li a{
+    /* text-align: left; */
+    display: flex;
+    text-transform: uppercase;
+    /* justify-content: flex-end; */
+    justify-content: space-between;
+    padding: 20px 20px;
+    text-decoration: none;
+}
+
+header .menuButton:hover{
+    background-color: rgb(155, 151, 160);
+}
+
+header .nav-name{
+    display:block;
+    float: left;
+    font-size: 20px;
+    padding: 10px 25px;
+    text-decoration: none;
+    color: rgb(226, 226, 226);
+    text-transform: uppercase;
+    font-family: 'Press Start 2P', cursive;
+    letter-spacing: 5px;
+}
+
+header .nav-name h4{
+    padding:0 18px;
+}
+
+/* end of header */
+
+/* transisi ketika mouse hover */
+header li a,
+header li a:after,
+header li a:before {
+  transition: all .5s;
+}
+header .navdesktop li a {
+    position: relative;
+    z-index: 1;
+    padding:10px;
+}
+
+header .navdesktop li a:hover {
     color: rgba(149, 193, 240, 0.39);
 }
 
-nav .navdesktop li a:after {
+header .navdesktop li a:after {
     display: block;
     position: absolute;
     top: 0;
@@ -79,7 +125,7 @@ nav .navdesktop li a:after {
     right: 0;
     margin: auto;
     width: 100%;
-    height: 5px;
+    height: 1px;
     content: '.';
     color: transparent;
     background: rgba(37, 56, 78, 0.466);
@@ -88,7 +134,7 @@ nav .navdesktop li a:after {
     z-index: -1;
 }
 
-nav .navdesktop  li a:hover:after {
+header .navdesktop  li a:hover:after {
     opacity: 1;
     visibility: visible;
     height: 100%;
@@ -96,11 +142,11 @@ nav .navdesktop  li a:hover:after {
 @-webkit-keyframes fill {
     0% {
       width: 0%;
-      height: 5px;
+      height: 1px;
     }
     50% {
       width: 100%;
-      height: 5px;
+      height: 1px;
     }
     100% {
       width: 100%;
@@ -112,28 +158,33 @@ nav .navdesktop  li a:hover:after {
 
 
 /* menu button/hamburger menu */
-nav .menuIcon{
+header .navdesktop{
+    clear: both;
+    max-height: 0;
+    transition: max-height .2s ease-out;
+}
+
+header .menuIcon{
     cursor: pointer;
     display: inline-block;
     float: right;
-    padding: 28px 20px;
+    padding: 16px 20px;
     position: relative;
     user-select: none;
 }
 
-nav .menuIcon .navIcon{
+header .menuIcon .navIcon{
     background: rgb(226, 226, 226);
     display: block;
-    height: 2px;
+    height: 2.5px;
     position: relative;
     transition: background .2s ease-out;
-    width: 18px;
-
+    width: 18px; 
 }
 
-nav .menuIcon .navIcon::before,
-nav .menuIcon .navIcon::after{
-    background:rgb(226, 226, 226) ;
+header .menuIcon .navIcon::before,
+header .menuIcon .navIcon::after{
+    background: rgb(226, 226, 226);
     content: '';
     display: block;
     height: 100%;
@@ -142,112 +193,94 @@ nav .menuIcon .navIcon::after{
     width: 100%;
 }
 
-nav .menuIcon .navIcon::before{
+
+header .menuIcon .navIcon::before{
     top: 5px;
 }
-
-nav .menuIcon .navIcon::after{
+header .menuIcon .navIcon::after{
     top: -5px;
 }
 
-nav .menuButton{
+header .menuButton{
     display: none;
 }
 
-nav .menuButton:checked ~ .navdesktop{
+header .menuButton:checked ~ .navdesktop{
     max-height: 240px;
 }
 
-nav .menuButton:checked ~ .menuIcon .navIcon{
-    background:  rgb(112, 128, 144, 0.95);
+header .menuButton:checked ~ .menuIcon .navIcon{
+    background: transparent;
 }
 
-nav .menuButton:checked ~ .menuIcon .navIcon::before{
+header .menuButton:checked ~ .menuIcon .navIcon::before{
     transform: rotate(-45deg);
 }
-nav .menuButton:checked ~ .menuIcon .navIcon::after{
+header .menuButton:checked ~ .menuIcon .navIcon::after{
     transform: rotate(45deg);
 }
 
-nav .menuButton:checked ~ .menuIcon:not(.steps) .navIcon::before,
-nav .menuButton:checked ~ .menuIcon:not(.steps) .navIcon::after{
+header .menuButton:checked ~ .menuIcon:not(.steps) .navIcon::before,
+header .menuButton:checked ~ .menuIcon:not(.steps) .navIcon::after{
     top: 0;
 }
 
 @media (min-width:768px){
-    nav li{
+    header li{
         float: left;
     }
-    nav li a{
+    header li a{
         padding: 20px 30px;
     }
-    nav ul.navdesktop{
+    header .navdesktop{
         clear: none;
-        float: left;
+        float: right;
+        letter-spacing: 1rem ;
         max-height: none;
     }
-    nav .menuIcon{
+
+    header .navdesktop a{
+        padding-left: 1rem;
+        padding-right: 1rem;
+        margin-right: 3rem;
+    }
+    header .menuIcon{
         display: none;
     }
 }
-/* ---end of menu button styling--- */
-nav .nav-name{
-    display: block;
-    float: left;
-    color: rgb(226, 226, 226);
-    text-transform: uppercase;
-    justify-content: space-evenly;
-    font-family: 'Press Start 2P', cursive;
-    letter-spacing: 5px;
-    font-size: 1.5em;
-    padding: 10px 20px;
+
+@media (max-width:640px){
+    header .navdesktop a{
+        margin-top: 0.3rem;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+        margin-bottom: 0.3rem ;
+    }
 }
 
-nav ul{
-    margin: 0;
-    padding: 0;
-    list-style: none;
-    overflow: hidden;
-    
-}
 
-nav li a{
-    display: block;
-    padding: 20px 20px;
-    text-decoration: none;
-}
-nav ul.navdesktop{
-    clear: both;
+header .navdesktop li {
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    /* max-height: 0; */
-    transition: max-height .2s ease-in-out;
-}
-
-.navdesktop li{
-    display: block;
+    justify-content: space-evenly;
     font-family: 'Barlow Semi Condensed', sans-serif;
-    font-size: 16px;
+    font-size: 14px;
     letter-spacing: 3px;
-    padding: 20px 20px;
-    /* border-left: 1px;
-    border-top: 1px;
-    margin-top: 3px; */
-    align-items: center;
-    justify-content: center;
+    list-style: none;
+    /* padding: 2rem; */
 }
 
-.navdesktop a {
-    color: rgba(226, 226, 226, 0.541);
+header .navdesktop a {
+    justify-content: space-evenly;
+    color: rgb(226, 226, 226);
     text-decoration: none;
     letter-spacing: 3px;
     font-weight: bold;
-    font-size: 16px;
-    margin-top: 3px;
-    padding: 0 2rem;
-    
+    font-size: 14px;
 }
+
+
+/* ---end of menu button styling--- */
+
 /* ketika screen size di bawah 768px,
 navdesktop dihilangkan */
 /* @media(max-width:767px){
@@ -329,40 +362,6 @@ dihilangkan */
     height: 100%;
     object-fit: cover;
 }
-
-/* .detail-article .trailer-video {
-    width: 100%;
-}
-
-.detail-article .trailer-video .iframe {
-    width: 100%;
-    position: relative;
-} */
-
-/* .trailer-video .iframe .video{
-      width: 100%;
-      position: relative;
-    }  */
-
-/* .post.tes{
-        padding-top: 25px;
-        padding-bottom: 25px;
-        border-bottom: solid 1px rgba(37, 38, 39, 0.15);
-    } */
-
-/* .post img{
-        display: block;
-        width: 100%;
-        border-radius: 4px;
-        max-height: 160px;
-        max-width: 280px;
-        object-fit: cover;
-    
-        /* width: 400px;
-        float: left;
-        margin:0 20px 0 0; */
-
-/* } */
 
 .opinion {
     /* nama parentnya */
