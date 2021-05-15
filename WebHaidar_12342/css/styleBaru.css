@@ -1,0 +1,566 @@
+/* credit for navbar design:
+-dev ed ()
+-mutedblues (https://codepen.io/mutedblues/pen/MmPNPG?editors=1100)
+-4reality.id */
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    
+}
+
+.darkmode {
+    background: #292c35;
+    color: whitesmoke;
+}
+
+/* h1, h3 {
+    font-family: 'Roboto Mono', monospace;
+} */
+
+body {
+    font-size: 16px;
+    font-family: 'Source Sans Pro', sans-serif;
+    background-color: #fffafa;
+    transition: all 0.2s;
+}
+
+ul{
+    list-style: none;
+}
+/* bagian header */
+
+header {
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+    /* display: block; */
+    position: fixed;
+    width: 100%;
+    font-size: 1rem;
+    box-shadow: 1px 1px 4px 0 rgba(0,0,0,.1);
+    /* margin-top: 8px; */
+    /* margin-bottom: auto; */
+    /* padding: 0px; */
+    /* alpha value di background-color: ; (angka paling akhir) berfungsi untuk mengatur opacity */
+    background-color: rgb(112, 128, 144, 0.95);
+    /* line-height: 1.75rem; */
+    z-index: 3;
+    /* box-shadow:  0 10px 20px rgba(50,50,50,.95); */
+}
+
+header nav {
+    position: relative;
+    /* height: 100 px; */
+    max-width: 90%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* min-height: 8vh; */
+    margin: 0 auto;
+   
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+header ul{
+    /* display: flex;
+    flex-direction: column;
+    width: 100%; */
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    overflow: hidden;
+}
+
+header li a{
+    /* text-align: left; */
+    display: flex;
+    text-transform: uppercase;
+    /* justify-content: flex-end; */
+    justify-content: space-between;
+    padding: 20px 20px;
+    text-decoration: none;
+}
+
+header .menuButton:hover{
+    background-color: rgb(155, 151, 160);
+}
+
+header .nav-name{
+    display:block;
+    float: left;
+    font-size: 20px;
+    padding: 10px 25px;
+    text-decoration: none;
+    color: rgb(226, 226, 226);
+    text-transform: uppercase;
+    font-family: 'Press Start 2P', cursive;
+    letter-spacing: 5px;
+}
+
+header .nav-name h4{
+    padding:0 18px;
+}
+
+/* end of header */
+
+/* transisi ketika mouse hover */
+header li a,
+header li a:after,
+header li a:before {
+  transition: all .5s;
+}
+header .navdesktop li a {
+    position: relative;
+    z-index: 1;
+    padding:10px;
+}
+
+header .navdesktop li a:hover {
+    color: rgba(149, 193, 240, 0.39);
+}
+
+header .navdesktop li a:after {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+    width: 100%;
+    height: 1px;
+    content: '.';
+    color: transparent;
+    background: rgba(37, 56, 78, 0.466);
+    visibility: none;
+    opacity: 0;
+    z-index: -1;
+}
+
+header .navdesktop  li a:hover:after {
+    opacity: 1;
+    visibility: visible;
+    height: 100%;
+}
+@-webkit-keyframes fill {
+    0% {
+      width: 0%;
+      height: 1px;
+    }
+    50% {
+      width: 100%;
+      height: 1px;
+    }
+    100% {
+      width: 100%;
+      height: 100%;
+      background: rgb(129, 126, 126);
+    }
+}
+/* ---end of selectors for hover animation--- */
+
+
+/* menu button/hamburger menu */
+header .navdesktop{
+    clear: both;
+    max-height: 0;
+    transition: max-height .2s ease-out;
+}
+
+header .menuIcon{
+    cursor: pointer;
+    display: inline-block;
+    float: right;
+    padding: 16px 20px;
+    position: relative;
+    user-select: none;
+}
+
+header .menuIcon .navIcon{
+    background: rgb(226, 226, 226);
+    display: block;
+    height: 2.5px;
+    position: relative;
+    transition: background .2s ease-out;
+    width: 18px; 
+}
+
+header .menuIcon .navIcon::before,
+header .menuIcon .navIcon::after{
+    background: rgb(226, 226, 226);
+    content: '';
+    display: block;
+    height: 100%;
+    position: absolute;
+    transition: all .2s ease-out;
+    width: 100%;
+}
+
+
+header .menuIcon .navIcon::before{
+    top: 5px;
+}
+header .menuIcon .navIcon::after{
+    top: -5px;
+}
+
+header .menuButton{
+    display: none;
+}
+
+header .menuButton:checked ~ .navdesktop{
+    max-height: 240px;
+}
+
+header .menuButton:checked ~ .menuIcon .navIcon{
+    background: transparent;
+}
+
+header .menuButton:checked ~ .menuIcon .navIcon::before{
+    transform: rotate(-45deg);
+}
+header .menuButton:checked ~ .menuIcon .navIcon::after{
+    transform: rotate(45deg);
+}
+
+header .menuButton:checked ~ .menuIcon:not(.steps) .navIcon::before,
+header .menuButton:checked ~ .menuIcon:not(.steps) .navIcon::after{
+    top: 0;
+}
+
+@media (min-width:768px){
+    header li{
+        float: left;
+    }
+    header li a{
+        display: block;
+        padding: 20px 30px;
+    }
+    header .navdesktop{
+        clear: none;
+        float: right;
+        letter-spacing: 1rem ;
+        max-height: none;
+    }
+
+    header .navdesktop a{
+        padding-left: 1rem;
+        padding-right: 1rem;
+        margin-right: 1rem;
+    }
+    header .menuIcon{
+        display: none;
+    }
+}
+
+@media (max-width:640px){
+    header ul{
+        width: 100%;
+        height: 100vh;
+        flex-direction: column;
+    }
+    header .navdesktop li{
+        display: flex;
+        flex-direction: column;
+    }
+    header .navdesktop a{
+        margin-top: 0.3rem;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+        margin-bottom: 0.3rem ;
+    }
+    header .menuButton{
+        display: flex;
+    }
+}
+
+
+header .navdesktop li {
+    display: flex;
+    justify-content: space-evenly;
+    font-family: 'Barlow Semi Condensed', sans-serif;
+    font-size: 14px;
+    letter-spacing: 3px;
+    list-style: none;
+    /* padding: 2rem; */
+}
+
+header .navdesktop a {
+    justify-content: space-evenly;
+    color: rgb(226, 226, 226);
+    text-decoration: none;
+    letter-spacing: 3px;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+
+/* ---end of menu button styling--- */
+
+/* ketika screen size di bawah 768px,
+navdesktop dihilangkan */
+/* @media(max-width:767px){
+    
+} */
+
+/* ketika screen size 
+lebih dari 768px. navmobile
+dihilangkan */
+/* @media(min-width:768px){
+    nav ul.navmobile{
+        display: none;
+    }
+    .navmobile li{
+        display: none;
+    }    
+    .navmobile a{
+        display: none;
+    }   
+} */
+
+/* nav ul.navmobile{
+    display: none;
+}
+
+.navmobile li{
+    display: none;
+} */
+
+.post {
+    /* nama parentnya */
+    padding-top: 8rem;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    transition: all 0.15s;
+}
+
+.post .article {
+    /* nama child/ anaknya */
+    width: 100%;
+    /* supaya full tampilannya  */
+    max-width: 1200px;
+    /* supaya tidak terlalu panjang tampilan teksnya,
+      sekaligus biar lebih responsif */
+    margin: auto;
+    display: flex;
+    margin-bottom: 4rem;
+    line-height: 1.75em;
+}
+
+.post .article .detail-article {
+    margin-left: 1rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.detail-article .title-Of-article {
+    font-weight: bold;
+}
+
+.detail-article .read-time {
+    color: #bf1313;
+}
+
+.detail-article .read-time, .detail-article .title-Of-article, .detail-article .description {
+    margin-bottom: .5rem;
+}
+
+.image {
+    min-width: 300px;
+    max-width: 300px;
+    height: 280px;
+    overflow: hidden;
+}
+
+.image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.opinion {
+    /* nama parentnya */
+    padding-top: 4rem;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    /* padding: 10px; */
+    /* margin: 5px 0; */
+    /* min-height: 250px; */
+}
+
+.opinion .opini-saya {
+    margin-left: 1rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.opinion .title {
+    font-weight: bold;
+    color: cornflowerblue;
+    margin-bottom: .5rem;
+}
+
+.opinion .opini-saya .desc {
+    margin-bottom: 2rem;
+}
+
+.about-me {
+    /* nama parentnya */
+    padding-top: 4rem;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.about-me h1 {
+    font-size: 2.5rem;
+    font-family: "neosans regular", "Helvetica Neue", Helvetica, Arial, Sans-serif;
+    letter-spacing: -0.07em;
+    margin-bottom: 0.1em;
+    line-height: 1.2em;
+}
+
+p .intro {
+    font-size: 2.5rem;
+    line-height: 1.3em;
+    margin-bottom: 0.7em;
+    clear: both;
+}
+
+.about-me p {
+    font-family: "proxima nova light", "Helvetica Neue", Helvetica, Arial, Sans-serif;
+    margin-bottom: 1.4em;
+    line-height: 1.4em;
+    -webkit-font-smoothing: antialiased;
+}
+
+.suggestion {
+    padding-top: 4rem;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.image-gameStory {
+    min-width: 400px;
+    max-width: 400px;
+    height: 300px;
+    overflow: hidden;
+}
+
+.image-gameStory img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.suggestion .pengantar-form {
+    padding-top: 4rem;
+    padding-left: 1rem;
+}
+
+.suggestion .container-form {
+    padding-top: 4rem;
+    padding-bottom: 4px;
+}
+
+.show-data {
+    margin-left: 1rem;
+    display: flex;
+    flex-direction: column;
+}
+
+footer {
+    font-size: 2rem;
+    text-align: center;
+    margin-top: 4rem;
+    margin-bottom: 1rem;
+}
+
+footer .icon {
+    cursor: pointer;
+}
+
+/* bagian ini untuk table
+    berisi game kesukaan */
+
+table {
+    border-collapse: collapse;
+}
+
+th, td {
+    border: 1px solid #999;
+    padding: 0.5rem;
+    text-align: left;
+}
+
+/* ----------------------------- */
+
+/* bagian untuk form */
+
+input[type=text], select, textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: vertical;
+}
+
+label {
+    padding: 12px 12px 12px 0;
+    display: inline-block;
+}
+
+input[type=submit] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    float: right;
+}
+
+input[type=submit]:hover {
+    background-color: #45a049;
+}
+
+.wadah-form {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+}
+
+.col-25 {
+    float: left;
+    width: 25%;
+    margin-top: 6px;
+}
+
+.col-75 {
+    float: left;
+    width: 75%;
+    margin-top: 6px;
+}
+
+/* Clear floats after the columns */
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+
+@media screen and (max-width: 600px) {
+    .col-25, .col-75, input[type=submit] {
+        width: 100%;
+        margin-top: 0;
+    }
+}
+
+/* ------------------------------------------------- */
